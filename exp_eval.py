@@ -82,7 +82,7 @@ def doOp(op, num1, num2):
     if (op == "*"):
         return num1*num2
     if (op == "/"):
-        if (num1 == 0 or num2 == 0):
+        if (num2 == 0):
             return 0
         return num2/num1
     if (op == "**"):
