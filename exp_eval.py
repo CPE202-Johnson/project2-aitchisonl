@@ -78,7 +78,7 @@ def doOp(op, num1, num2):
     if (op == "+"):
         return num1+num2
     if (op == "-"):
-        return num1-num2
+        return num2-num1
     if (op == "*"):
         return num1*num2
     if (op == "/"):

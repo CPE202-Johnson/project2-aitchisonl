@@ -27,6 +27,16 @@ class test_expressions(unittest.TestCase):
             self.fail()
         except PostfixFormatException as e:
             self.assertEqual(str(e), "Too many operands")
+    def test_operators(self):
+        self.assertAlmostEqual(postfix_eval("3 2 -"), 1)
+        self.assertAlmostEqual(postfix_eval("3 2 *"), 6)
+        self.assertAlmostEqual(postfix_eval("3 2 /"), 1.5)
+        self.assertAlmostEqual(postfix_eval("3 2 **"), 9)
+
+
+
+    def postfix(self):
+        self.assertAlmostEqual(postfix_eval("2.5 2 +"), 4.5)
 
     def test_prefix_eval(self):
         self.assertAlmostEqual("2 2 +", prefix_to_postfix("+ 2 2"))
