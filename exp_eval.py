@@ -90,5 +90,6 @@ def isFloat(stri):
     for char in stri:
         if not char.isnumeric():
             if char != ".":
-                isfl = False
+                if char != "-":
+                    isfl = False
     return isfl
