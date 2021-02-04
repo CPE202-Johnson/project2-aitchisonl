@@ -5,7 +5,7 @@ from exp_eval import *
 
 class test_expressions(unittest.TestCase):
     def test_postfix_eval_01(self):
-        self.assertAlmostEqual(postfix_eval("3 5 +"), 8)
+        self.assertAlmostEqual(postfix_eval("2 3 * 5 7 + + 8 +"), 26)
 
     def test_postfix_eval_02(self):
         try:
@@ -27,6 +27,9 @@ class test_expressions(unittest.TestCase):
             self.fail()
         except PostfixFormatException as e:
             self.assertEqual(str(e), "Too many operands")
+
+    def test_prefix_eval(self):
+        self.assertAlmostEqual("2 2 +", prefix_to_postfix("+ 2 2"))
 
 if __name__ == "__main__":
     unittest.main()
