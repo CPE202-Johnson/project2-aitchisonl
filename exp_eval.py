@@ -82,8 +82,9 @@ def doOp(op, num1, num2):
     if (op == "*"):
         return num1*num2
     if (op == "/"):
-        if (num2 == 0):
-            return 0
+        if (num1 == 0):
+            raise PostfixFormatException:
+                return 0
         return num2/num1
     if (op == "**"):
         return num2**num1
