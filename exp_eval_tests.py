@@ -35,7 +35,7 @@ class test_expressions(unittest.TestCase):
 
 
 
-    def postfix(self):
+    def test_postfix_float(self):
         self.assertAlmostEqual(postfix_eval("2.5 2 +"), 4.5)
 
     def test_prefix_eval(self):
