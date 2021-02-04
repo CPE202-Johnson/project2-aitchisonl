@@ -35,7 +35,7 @@ class test_expressions(unittest.TestCase):
         self.assertAlmostEqual(postfix_eval("0 2 /"), 0)
         with self.assertRaises(PostfixFormatException):
             try:
-                postfix_eval("2 0 /"")
+                postfix_eval("2 0 /")
  
 
 
