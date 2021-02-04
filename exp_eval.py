@@ -83,7 +83,7 @@ def doOp(op, num1, num2):
         return num1*num2
     if (op == "/"):
         if (num1 == 0):
-            raise PostfixFormatException("Divided by zero")
+            raise ValueError("Divided by zero")
 
         return num2/num1
     if (op == "**"):
